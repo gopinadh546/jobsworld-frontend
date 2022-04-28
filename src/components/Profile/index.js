@@ -43,7 +43,8 @@ class Profile extends Component {
   // To logout the user
   onCLickLogOutBtn = () => {
     Cookies.remove("jwt_token");
-    window.location = "/login";
+    alert("Logging out....")
+    window.location = "/";
   };
 
   onClickResume = () => {

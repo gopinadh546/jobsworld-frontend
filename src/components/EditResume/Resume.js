@@ -144,7 +144,7 @@ function Resume(props) {
       // Making a update request to server to change the details of the resume.
       async function fetchData() {
         const response = await fetch(
-          `http://localhost:5000/resume/edit/${resumeDetails.id}`,
+          `${process.env.REACT_APP_SERVER_URL}/resume/edit/${resumeDetails.id}`,
           options
         );
         if (response.ok === true) {
@@ -152,7 +152,7 @@ function Resume(props) {
           alert(
             "Resume updated successfully, You will be redirected to profile page..."
           );
-          window.location = "/profile";
+          window.location = "/";
         }
       }
       fetchData();
